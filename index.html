@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Marcele Oliveira | Harmonização Glútea e Seios em Salvador</title>
+<meta name="description" content="Harmonização Glútea e Seios em Salvador com a Dra. Marcele Oliveira, criadora do Método Bumbum UP. Agende sua avaliação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <div class="container">
+    <div class="logo">Dra. Marcele Oliveira<span>Harmonização Glútea e Seios</span></div>
+    <nav>
+      <ul class="menu" id="menu-principal">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="https://wa.me/5571985060519?text=Olá, vim pelo site e gostaria de agendar uma avaliação!" class="cta-header">WhatsApp</a>
+    <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== BOTÃO EDITAR ===================== -->
+<button id="botao-editar" class="botao-editar" onclick="abrirEditorModal()">✏️ Editar Página</button>
+
+<div id="editor-modal" class="editor-modal" style="display: none;">
+  <div class="editor-container">
+    <div class="editor-header">
+      <h2>Editar Página</h2>
+      <button onclick="fecharEditorModal()" class="fechar-modal">✕</button>
+    </div>
+    <div class="editor-form">
+      <label>Título da Página:</label>
+      <input type="text" id="edit-titulo" placeholder="Título">
+
+      <label>Subtítulo:</label>
+      <input type="text" id="edit-subtitulo" placeholder="Subtítulo">
+
+      <label>Telefone:</label>
+      <input type="text" id="edit-telefone" placeholder="Telefone">
+
+      <label>Endereço:</label>
+      <textarea id="edit-endereco" placeholder="Endereço"></textarea>
+
+      <label>Instagram:</label>
+      <input type="text" id="edit-instagram" placeholder="@usuario">
+
+      <div class="editor-buttons">
+        <button onclick="salvarEdicoes()" class="botao-salvar">💾 Salvar Alterações</button>
+        <button onclick="fecharEditorModal()" class="botao-cancelar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-texto reveal reveal-left">
+      <span class="selo">Método Bumbum UP</span>
+      <h1 data-edit="secoes.hero.titulo">Harmonização <em>Glútea e Seios</em> em Salvador</h1>
+      <p data-edit="secoes.hero.descricao">Tratamentos estéticos avançados para empinar e valorizar o bumbum sem cirurgia, com foco em naturalidade, segurança e resultados harmoniosos.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/5571985060519?text=Olá, vim pelo site e gostaria de agendar uma avaliação!" class="btn btn-primario">Agendar Avaliação</a>
+        <a href="tel:+5571985060519" class="btn btn-secundario">Ligar Agora</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-numero"><span class="contador" data-alvo="5,0">0</span> ⭐</div>
+          <div class="stat-label">Avaliação no Google</div>
+        </div>
+        <div>
+          <div class="stat-numero"><span class="contador" data-alvo="7">0</span></div>
+          <div class="stat-label">Avaliações no Google</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-imagem reveal reveal-right">
+      <img src="./assets/imagens/image.png" alt="Resultado de harmonização de seios - antes e depois">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CREDIBILIDADE ===================== -->
+<section class="credibilidade">
+  <div class="container">
+    <div class="titulo-secao reveal">
+      <span class="eyebrow">Por que confiar</span>
+      <h2>Confiança de quem já se tratou com a Dra. Marcele</h2>
+    </div>
+    <div class="grid-credibilidade">
+      <div class="card-credibilidade reveal">
+        <span class="icone">⭐</span>
+        <h3>5,0 no Google</h3>
+        <p>Avaliação média com 7 avaliações de pacientes reais.</p>
+      </div>
+      <div class="card-credibilidade reveal">
+        <span class="icone">💉</span>
+        <h3>Método Bumbum UP</h3>
+        <p>Técnica exclusiva criada pela Dra. Marcele Oliveira para resultados sem cirurgia.</p>
+      </div>
+      <div class="card-credibilidade reveal">
+        <span class="icone">🤍</span>
+        <h3>Atendimento Humanizado</h3>
+        <p>Avaliação individual e personalizada para cada paciente.</p>
+      </div>
+      <div class="card-credibilidade reveal">
+        <span class="icone">📍</span>
+        <h3>Localização Premium</h3>
+        <p>Atendimento no CEO Salvador Shopping, Caminho das Árvores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVIÇOS ===================== -->
+<section class="servicos" id="servicos">
+  <div class="container">
+    <div class="titulo-secao reveal">
+      <span class="eyebrow">Procedimentos</span>
+      <h2 data-edit="secoes.servicos.titulo">Nossos Procedimentos</h2>
+      <p>Tratamentos estéticos avançados, personalizados para cada objetivo</p>
+    </div>
+    <div class="grid-servicos">
+      <div class="card-servico reveal">
+        <div class="numero">01</div>
+        <h3>Harmonização Glútea</h3>
+        <p>Método Bumbum UP: mais volume, projeção e definição sem cirurgia.</p>
+      </div>
+      <div class="card-servico reveal">
+        <div class="numero">02</div>
+        <h3>Harmonização de Seios</h3>
+        <p>Procedimentos personalizados com foco em naturalidade e resultados harmoniosos.</p>
+      </div>
+      <div class="card-servico reveal">
+        <div class="numero">03</div>
+        <h3>Contorno Corporal</h3>
+        <p>Técnicas modernas para valorizar as curvas e a autoestima.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE ===================== -->
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="sobre-imagem reveal reveal-left">
+      <img src="./assets/imagens/image.png" alt="Resultado de tratamento estético - Dra. Marcele Oliveira">
+    </div>
+    <div class="sobre-texto reveal reveal-right">
+      <span class="eyebrow">Sobre o Atendimento</span>
+      <h2>Naturalidade, segurança e resultados harmoniosos</h2>
+      <p>A <strong>Dra. Marcele Oliveira</strong> é especialista em harmonização glútea em Salvador, oferecendo tratamentos estéticos avançados para quem deseja empinar e valorizar o bumbum sem cirurgia.</p>
+      <p>Criadora do <strong>Método Bumbum UP</strong>, realiza procedimentos personalizados com foco em naturalidade, segurança e resultados harmoniosos. Atendimento humanizado, avaliação individual e técnicas modernas para glúteos, contorno corporal e autoestima.</p>
+      <p>Agende sua avaliação e descubra como conquistar mais volume, projeção e definição sem necessidade de procedimentos cirúrgicos. Localizada em Salvador - BA.</p>
+      <a href="https://wa.me/5571985060519?text=Olá, vim pelo site e gostaria de agendar uma avaliação!" class="btn btn-primario">Falar com a Clínica</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DIFERENCIAIS ===================== -->
+<section class="diferenciais">
+  <div class="container">
+    <div class="titulo-secao reveal">
+      <span class="eyebrow">Diferenciais</span>
+      <h2>O que torna o atendimento diferente</h2>
+    </div>
+    <div class="grid-diferenciais">
+      <div class="item-diferencial reveal">
+        <div class="check-animado">✓</div>
+        <div>
+          <h4>Método Bumbum UP exclusivo</h4>
+          <p>Técnica criada e desenvolvida pela Dra. Marcele Oliveira.</p>
+        </div>
+      </div>
+      <div class="item-diferencial reveal">
+        <div class="check-animado">✓</div>
+        <div>
+          <h4>Sem cirurgia</h4>
+          <p>Resultados de volume e projeção com procedimentos não cirúrgicos.</p>
+        </div>
+      </div>
+      <div class="item-diferencial reveal">
+        <div class="check-animado">✓</div>
+        <div>
+          <h4>Avaliação individual</h4>
+          <p>Cada tratamento é pensado de forma personalizada.</p>
+        </div>
+      </div>
+      <div class="item-diferencial reveal">
+        <div class="check-animado">✓</div>
+        <div>
+          <h4>Foco em naturalidade</h4>
+          <p>Resultados harmoniosos, sem exageros.</p>
+        </div>
+      </div>
+      <div class="item-diferencial reveal">
+        <div class="check-animado">✓</div>
+        <div>
+          <h4>Atendimento humanizado</h4>
+          <p>Acolhimento em todas as etapas do processo.</p>
+        </div>
+      </div>
+      <div class="item-diferencial reveal">
+        <div class="check-animado">✓</div>
+        <div>
+          <h4>Localização privilegiada</h4>
+          <p>CEO Salvador Shopping, Caminho das Árvores.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEPOIMENTOS ===================== -->
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+    <div class="titulo-secao reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>O que dizem no Google</h2>
+    </div>
+    <div class="carrossel reveal">
+      <div class="carrossel-track" id="carrossel-track">
+        <div class="depoimento-slide">
+          <div class="card-depoimento">
+            <div class="estrelas">★★★★★</div>
+            <p class="texto">"O resultado superou todas as minhas expectativas."</p>
+            <div class="autor">Cristiane Oliveira</div>
+          </div>
+        </div>
+        <div class="depoimento-slide">
+          <div class="card-depoimento">
+            <div class="estrelas">★★★★★</div>
+            <p class="texto">"Atendimento maravilhoso e ótimos resultados!"</p>
+            <div class="autor">Juliana Blanco</div>
+          </div>
+        </div>
+        <div class="depoimento-slide">
+          <div class="card-depoimento">
+            <div class="estrelas">★★★★★</div>
+            <p class="texto">"Maravilhosa, trabalho impecável"</p>
+            <div class="autor">Alessandra Santana</div>
+          </div>
+        </div>
+      </div>
+      <div class="carrossel-controles">
+        <button class="carrossel-seta" id="carrossel-prev" aria-label="Anterior">‹</button>
+        <div class="carrossel-dots" id="carrossel-dots"></div>
+        <button class="carrossel-seta" id="carrossel-next" aria-label="Próximo">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALERIA ===================== -->
+<section class="galeria">
+  <div class="container">
+    <div class="titulo-secao reveal">
+      <span class="eyebrow">Resultados</span>
+      <h2>Galeria de Antes &amp; Depois</h2>
+      <p>Resultados reais de pacientes atendidas pela Dra. Marcele Oliveira</p>
+    </div>
+    <div class="grid-galeria">
+      <div class="item-galeria reveal">
+        <div class="moldura-imagem">
+          <img src="./assets/imagens/image.png" alt="Antes e depois - Harmonização de Seios">
+        </div>
+        <div class="legenda">Antes &amp; Depois — Harmonização de Seios</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="cta-final">
+  <div class="container reveal">
+    <h2>Pronta para conquistar mais autoestima?</h2>
+    <p>Agende sua avaliação com a Dra. Marcele Oliveira e descubra o Método Bumbum UP.</p>
+    <a href="https://wa.me/5571985060519?text=Olá, vim pelo site e gostaria de agendar uma avaliação!" class="btn btn-primario">Agendar pelo WhatsApp</a>
+  </div>
+</section>
+
+<!-- ===================== CONTATO ===================== -->
+<section class="contato" id="contato">
+  <div class="container">
+    <div class="titulo-secao reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>Fale com a Clínica</h2>
+    </div>
+    <div class="grid-contato">
+      <div class="info-contato reveal reveal-left">
+        <div class="item-contato">
+          <div class="icone-contato">📞</div>
+          <div>
+            <h4>Telefone / WhatsApp</h4>
+            <a href="https://wa.me/5571985060519?text=Olá, vim pelo site e gostaria de agendar uma avaliação!">(71) 98506-0519</a>
+          </div>
+        </div>
+        <div class="item-contato">
+          <div class="icone-contato">📍</div>
+          <div>
+            <h4>Endereço</h4>
+            <p>CEO Salvador Shopping - Av. Tancredo Neves, 2539 - Caminho das Árvores, Salvador - BA, 41820-021</p>
+          </div>
+        </div>
+        <div class="horarios">
+          <h4 style="margin-bottom:12px;">Horário de Funcionamento</h4>
+          <table>
+            <tr><td>Segunda-feira</td><td>09:00–20:00</td></tr>
+            <tr><td>Terça-feira</td><td>09:00–20:00</td></tr>
+            <tr><td>Quarta-feira</td><td>09:00–20:00</td></tr>
+            <tr><td>Quinta-feira</td><td>09:00–20:00</td></tr>
+            <tr><td>Sexta-feira</td><td>09:00–20:00</td></tr>
+            <tr><td>Sábado</td><td>09:00–12:00</td></tr>
+            <tr><td>Domingo</td><td>Fechado</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="reveal reveal-right">
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps?q=CEO%20Salvador%20Shopping%20-%20Av.%20Tancredo%20Neves%2C%202539%20-%20Caminho%20das%20%C3%81rvores%2C%20Salvador%20-%20BA%2C%2041820-021&output=embed"
+            width="100%" height="400" style="border: none; border-radius: 12px;"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+        <a href="https://wa.me/5571985060519?text=Olá, vim pelo site e gostaria de agendar uma avaliação!" class="btn btn-primario" style="width:100%; justify-content:center;">Agendar Avaliação pelo WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="logo">Dra. Marcele Oliveira</div>
+  <p>Harmonização Glútea e Seios em Salvador - BA</p>
+  <p>CEO Salvador Shopping - Av. Tancredo Neves, 2539 - Caminho das Árvores, Salvador - BA, 41820-021</p>
+  <p>(71) 98506-0519</p>
+  <p style="margin-top:16px;">&copy; 2026 Dra. Marcele Oliveira. Todos os direitos reservados.</p>
+</footer>
+
+<a href="https://wa.me/5571985060519?text=Olá, vim pelo site e gostaria de agendar uma avaliação!" class="whatsapp-flutuante" aria-label="WhatsApp">💬</a>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

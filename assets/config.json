@@ -1,0 +1,39 @@
+{
+  "empresa": {
+    "nome": "Dra. Marcele Oliveira | Harmonização Glútea e Seios em Salvador",
+    "telefone": "+55 71 98506-0519",
+    "email": "",
+    "endereco": "CEO Salvador Shopping - Av. Tancredo Neves, 2539 - Caminho das Árvores, Salvador - BA, 41820-021",
+    "instagram": ""
+  },
+  "pagina": {
+    "titulo": "Harmonização Glútea e Seios em Salvador",
+    "subtitulo": "Criadora do Método Bumbum UP: mais volume, projeção e naturalidade, sem cirurgia.",
+    "avaliacoes": "5,0 ⭐ (7 avaliações no Google)"
+  },
+  "secoes": {
+    "hero": {
+      "titulo": "Harmonização Glútea e Seios em Salvador",
+      "descricao": "Tratamentos estéticos avançados para empinar e valorizar o bumbum sem cirurgia, com foco em naturalidade, segurança e resultados harmoniosos.",
+      "cta_principal": "Agendar Avaliação",
+      "cta_secundaria": "Falar no WhatsApp"
+    },
+    "servicos": {
+      "titulo": "Nossos Procedimentos",
+      "items": [
+        { "numero": "01", "nome": "Harmonização Glútea", "desc": "Método Bumbum UP: mais volume, projeção e definição sem cirurgia." },
+        { "numero": "02", "nome": "Harmonização de Seios", "desc": "Procedimentos personalizados com foco em naturalidade e resultados harmoniosos." },
+        { "numero": "03", "nome": "Contorno Corporal", "desc": "Técnicas modernas para valorizar as curvas e a autoestima." }
+      ]
+    },
+    "sobre": {
+      "titulo": "Sobre o Atendimento",
+      "descricao": "A Dra. Marcele Oliveira é especialista em harmonização glútea em Salvador, oferecendo tratamentos estéticos avançados para quem deseja empinar e valorizar o bumbum sem cirurgia. Criadora do Método Bumbum UP, realiza procedimentos personalizados com foco em naturalidade, segurança e resultados harmoniosos. Atendimento humanizado, avaliação individual e técnicas modernas para glúteos, contorno corporal e autoestima."
+    }
+  },
+  "cores": {
+    "primaria": "#FFFFFF",
+    "secundaria": "#F5F5DC",
+    "destaque": "#FF6B35"
+  }
+}
