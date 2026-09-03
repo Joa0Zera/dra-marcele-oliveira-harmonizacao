@@ -838,24 +838,115 @@ section { padding: 80px 20px; }
 
 /* ---------- Footer ---------- */
 .footer {
-  background: var(--cor-texto);
-  color: rgba(255,255,255,0.8);
-  padding: 50px 20px 24px;
+  position: relative;
+  background:
+    radial-gradient(ellipse 900px 420px at 50% 0%, rgba(255,107,53,0.12), transparent 65%),
+    linear-gradient(180deg, #2b1d15 0%, #1d130d 55%, #140d09 100%);
+  color: rgba(255,255,255,0.85);
   text-align: center;
+  overflow: hidden;
 }
-.footer .logo { color: var(--cor-destaque); margin-bottom: 12px; }
-.footer p { font-size: 13px; color: rgba(255,255,255,0.6); }
-.footer .redes { margin: 20px 0; display: flex; justify-content: center; gap: 20px; }
-.footer .redes a {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,107,53,0.75) 50%, transparent 100%);
+  box-shadow: 0 0 20px 2px rgba(255,107,53,0.6);
+}
+.footer-container {
+  position: relative;
+  z-index: 1;
+  padding: 70px 20px 44px;
+}
+.footer-logo {
+  font-family: var(--fonte-titulo);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--cor-destaque);
+  margin-bottom: 10px;
+}
+.footer-subtitulo {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 28px;
+}
+.footer-divisor {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  gap: 16px;
+  max-width: 480px;
+  margin: 0 auto 44px;
 }
-.footer .redes a:hover { background: var(--cor-destaque); transform: translateY(-3px); }
+.footer-divisor span {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,107,53,0.4);
+}
+.footer-divisor-icone {
+  width: 16px;
+  height: 16px;
+  color: var(--cor-destaque);
+  flex-shrink: 0;
+}
+.footer-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px 0;
+}
+.footer-info-item {
+  flex: 1;
+  min-width: 200px;
+  padding: 0 32px;
+  position: relative;
+}
+.footer-info-item + .footer-info-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px; bottom: 6px;
+  width: 1px;
+  background: rgba(255,255,255,0.15);
+}
+.footer-info-icone {
+  width: 22px;
+  height: 22px;
+  color: var(--cor-destaque);
+  margin-bottom: 10px;
+}
+.footer-info-item h4 {
+  font-family: var(--fonte-corpo);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-info-item p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+}
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 22px 20px;
+}
+.footer-bottom p {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.5);
+}
+
+@media (max-width: 700px) {
+  .footer-info { flex-direction: column; gap: 32px; }
+  .footer-info-item + .footer-info-item::before { display: none; }
+}
 
 /* ---------- WhatsApp flutuante ---------- */
 .whatsapp-flutuante {
