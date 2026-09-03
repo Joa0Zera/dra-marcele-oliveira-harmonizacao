@@ -286,34 +286,87 @@ section { padding: 80px 20px; }
 }
 
 /* ---------- Credibilidade ---------- */
-.credibilidade { background: var(--cor-primaria); }
+.credibilidade {
+  background: linear-gradient(160deg, #FDF6EC 0%, #FBEADA 100%);
+}
 .credibilidade .titulo-secao { text-align: center; margin-bottom: 50px; }
+.credibilidade .titulo-secao .eyebrow {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+}
+.credibilidade .titulo-secao .eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 40px; height: 2px;
+  background: var(--cor-destaque);
+}
+.credibilidade .titulo-secao h2 {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--cor-texto);
+}
+.credibilidade .titulo-secao h2 em {
+  font-style: normal;
+  color: var(--cor-destaque);
+}
+.credibilidade .titulo-secao p {
+  font-size: 16px;
+  max-width: 560px;
+  margin: 0 auto;
+}
 .grid-credibilidade {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 28px;
 }
 .card-credibilidade {
-  background: var(--cor-primaria);
-  border: 1px solid var(--cor-secundaria);
-  border-radius: 16px;
-  padding: 32px 24px;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 107, 53, 0.12);
+  border-radius: 20px;
+  padding: 40px 28px;
   text-align: center;
-  box-shadow: var(--sombra-padrao);
+  box-shadow: 0 10px 30px rgba(58, 49, 40, 0.06);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .card-credibilidade:hover {
-  box-shadow: var(--sombra-hover);
-  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(58, 49, 40, 0.12);
+  transform: translateY(-6px);
 }
 .card-credibilidade .icone {
-  font-size: 36px;
-  margin-bottom: 16px;
-  display: inline-block;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  font-size: 26px;
+  background: rgba(255, 107, 53, 0.08);
+  border: 1px solid rgba(255, 107, 53, 0.2);
   transition: transform 0.3s ease;
 }
+.card-credibilidade:nth-child(1) .icone { background: rgba(255, 199, 44, 0.15); border-color: rgba(255, 199, 44, 0.35); }
+.card-credibilidade:nth-child(2) .icone { background: rgba(93, 120, 255, 0.12); border-color: rgba(93, 120, 255, 0.3); }
+.card-credibilidade:nth-child(3) .icone { background: rgba(155, 110, 255, 0.12); border-color: rgba(155, 110, 255, 0.3); }
+.card-credibilidade:nth-child(4) .icone { background: rgba(255, 71, 133, 0.12); border-color: rgba(255, 71, 133, 0.3); }
 .card-credibilidade:hover .icone { transform: scale(1.15) rotate(-5deg); }
-.card-credibilidade h3 { font-size: 18px; margin-bottom: 10px; }
+.card-credibilidade h3 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  position: relative;
+}
+.card-credibilidade h3::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 32px; height: 2px;
+  background: var(--cor-destaque);
+}
 .card-credibilidade p { font-size: 14px; color: var(--cor-texto-claro); }
 
 /* ---------- Títulos de seção ---------- */
