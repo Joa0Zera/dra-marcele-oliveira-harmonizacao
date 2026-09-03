@@ -170,7 +170,7 @@ section { padding: 80px 20px; }
   position: relative;
   padding-top: 160px;
   padding-bottom: 100px;
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(245, 245, 220, 0.82) 60%, rgba(237, 232, 208, 0.78) 100%), url("../imagens/hero-fundo.png");
+  background-image: url("../imagens/hero-fundo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -178,7 +178,7 @@ section { padding: 80px 20px; }
 }
 .hero .container {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: 50px;
   align-items: center;
 }
