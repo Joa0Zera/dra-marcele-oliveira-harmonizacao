@@ -685,7 +685,9 @@ section { padding: 80px 20px; }
   min-width: 0;
   flex: 0 0 320px;
   width: 320px;
+  height: auto;
   padding: 10px 0;
+  display: flex;
 }
 @keyframes esteira-depoimentos {
   from { transform: translateX(0); }
@@ -697,6 +699,12 @@ section { padding: 80px 20px; }
   padding: 40px;
   text-align: center;
   box-shadow: var(--sombra-padrao);
+  width: 100%;
+  height: 340px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .card-depoimento .estrelas { color: var(--cor-destaque); font-size: 20px; margin-bottom: 16px; }
 .card-depoimento p.texto {
@@ -704,8 +712,12 @@ section { padding: 80px 20px; }
   font-style: italic;
   color: var(--cor-texto);
   margin-bottom: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
 }
-.card-depoimento .autor { font-weight: 600; color: var(--cor-destaque); }
+.card-depoimento .autor { font-weight: 600; color: var(--cor-destaque); margin-top: auto; }
 
 .carrossel-controles {
   display: flex;
