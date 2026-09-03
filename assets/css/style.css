@@ -255,11 +255,17 @@ section { padding: 80px 20px; }
 
 .hero-imagem {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 46%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   will-change: transform;
+}
+.hero-imagem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.9) 32%, rgba(255,255,255,0.45) 58%, rgba(255,255,255,0.05) 85%);
 }
 .hero-imagem img {
   width: 100%;
@@ -274,11 +280,8 @@ section { padding: 80px 20px; }
 @media (max-width: 900px) {
   .hero .container { grid-template-columns: 1fr; padding-top: 120px; padding-bottom: 40px; }
   .hero-texto h1 { font-size: 34px; }
-  .hero-imagem {
-    position: static;
-    width: 100%;
-    height: 320px;
-    margin-bottom: 30px;
+  .hero-imagem::after {
+    background: linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 45%, rgba(255,255,255,0.6) 75%, rgba(255,255,255,0.25) 100%);
   }
 }
 
