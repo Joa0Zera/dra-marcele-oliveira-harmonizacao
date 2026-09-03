@@ -168,21 +168,20 @@ section { padding: 80px 20px; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding-top: 160px;
-  padding-bottom: 100px;
-  background-image: url("../imagens/hero-fundo.png");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-color: var(--cor-primaria);
+  background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
   overflow: hidden;
 }
 .hero .container {
+  position: relative;
+  z-index: 1;
+  padding-top: 160px;
+  padding-bottom: 100px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
   align-items: center;
 }
+.hero-texto { max-width: 560px; }
 .hero-texto .selo {
   display: inline-block;
   background: rgba(255, 107, 53, 0.12);
@@ -255,19 +254,32 @@ section { padding: 80px 20px; }
 }
 
 .hero-imagem {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 46%;
   will-change: transform;
 }
 .hero-imagem img {
-  border-radius: 20px;
-  box-shadow: var(--sombra-hover);
-  max-height: 560px;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
 }
 
 @media (max-width: 900px) {
-  .hero .container { grid-template-columns: 1fr; }
+  .hero .container { grid-template-columns: 1fr; padding-top: 120px; padding-bottom: 40px; }
   .hero-texto h1 { font-size: 34px; }
-  .hero { padding-top: 120px; }
+  .hero-imagem {
+    position: static;
+    width: 100%;
+    height: 320px;
+    margin-bottom: 30px;
+  }
 }
 
 /* ---------- Credibilidade ---------- */
