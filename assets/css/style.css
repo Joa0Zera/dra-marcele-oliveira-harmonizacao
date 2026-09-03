@@ -777,7 +777,7 @@ section { padding: 80px 20px; }
 
 /* ---------- CTA Final ---------- */
 .cta-final {
-  background: linear-gradient(135deg, var(--cor-destaque), var(--cor-destaque-escura));
+  background: var(--cor-destaque-escura) url("../imagens/cta-final-fundo.png") center / cover no-repeat;
   text-align: center;
   color: #fff;
 }
