@@ -390,6 +390,33 @@ section { padding: 80px 20px; }
 
 /* ---------- Serviços ---------- */
 .servicos { background: var(--cor-secundaria); }
+.servicos .titulo-secao .eyebrow { position: relative; padding-bottom: 14px; }
+.servicos .titulo-secao .eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 28px; height: 2px;
+  background: var(--cor-destaque);
+}
+.servicos .titulo-secao h2 {
+  background: none;
+  -webkit-text-fill-color: var(--cor-texto);
+  color: var(--cor-texto);
+}
+.servicos-divisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--cor-destaque);
+  margin-bottom: 16px;
+}
+.servicos-divisor span {
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 107, 53, 0.35);
+}
 .grid-servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -403,20 +430,60 @@ section { padding: 80px 20px; }
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 .card-servico:hover {
   box-shadow: var(--sombra-hover);
   transform: translateY(-4px);
 }
 .card-servico .numero {
+  position: absolute;
+  top: 0; left: 0;
   font-family: var(--fonte-titulo);
-  font-size: 46px;
+  font-size: 20px;
   font-weight: 700;
-  color: rgba(255, 107, 53, 0.18);
-  margin-bottom: 12px;
+  color: var(--cor-texto);
+  background: var(--cor-secundaria);
+  padding: 8px 18px 10px 20px;
+  border-radius: 0 0 16px 0;
+  margin-bottom: 0;
+}
+.card-servico-icone {
+  width: 64px;
+  height: 64px;
+  margin: 26px auto 18px;
+  border-radius: 50%;
+  background: var(--cor-secundaria);
+  color: var(--cor-destaque);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card-servico h3 { font-size: 22px; margin-bottom: 12px; color: var(--cor-texto); }
 .card-servico p { color: var(--cor-texto-claro); font-size: 15px; }
+.card-servico-linha {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 107, 53, 0.2);
+  margin: 24px 0 22px;
+}
+.card-servico-features {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  list-style: none;
+}
+.card-servico-features li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--cor-texto-claro);
+  font-size: 13px;
+  line-height: 1.3;
+}
+.card-servico-features svg { color: var(--cor-destaque); }
 
 /* ---------- Sobre ---------- */
 .sobre .container {
