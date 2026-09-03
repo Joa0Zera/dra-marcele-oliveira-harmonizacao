@@ -667,6 +667,30 @@ section { padding: 80px 20px; }
   min-width: 100%;
   padding: 20px;
 }
+.carrossel-esteira {
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%);
+}
+.carrossel-esteira .carrossel-track {
+  width: max-content;
+  gap: 24px;
+  animation: esteira-depoimentos 40s linear infinite;
+}
+.carrossel-esteira:hover .carrossel-track {
+  animation-play-state: paused;
+}
+.carrossel-esteira .depoimento-slide {
+  min-width: 0;
+  flex: 0 0 320px;
+  width: 320px;
+  padding: 10px 0;
+}
+@keyframes esteira-depoimentos {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 .card-depoimento {
   background: var(--cor-secundaria);
   border-radius: 20px;
