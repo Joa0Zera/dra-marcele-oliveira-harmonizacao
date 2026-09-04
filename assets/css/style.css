@@ -839,20 +839,10 @@ section { padding: 80px 20px; }
 /* ---------- Footer ---------- */
 .footer {
   position: relative;
-  background:
-    radial-gradient(ellipse 900px 420px at 50% 0%, rgba(255,107,53,0.12), transparent 65%),
-    linear-gradient(180deg, #2b1d15 0%, #1d130d 55%, #140d09 100%);
+  background: #1d130d url('../imagens/footer-fundo.png') center center / cover no-repeat;
   color: rgba(255,255,255,0.85);
   text-align: center;
   overflow: hidden;
-}
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,107,53,0.75) 50%, transparent 100%);
-  box-shadow: 0 0 20px 2px rgba(255,107,53,0.6);
 }
 .footer-container {
   position: relative;
@@ -935,7 +925,6 @@ section { padding: 80px 20px; }
 .footer-bottom {
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(255,255,255,0.1);
   padding: 22px 20px;
 }
 .footer-bottom p {
